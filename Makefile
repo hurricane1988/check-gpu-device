@@ -1,6 +1,6 @@
 # Image URL to use all building/pushing image targets
 VERSION ?= v1.0.0
-IMG ?= uat-registry.faw.cn/base/check-gpu-device
+IMG ?= hurricane1988/check-gpu-device
 
 # CONTAINER_TOOL defines the container tool to be used for building images.
 # Be aware that the target commands are only tested with Docker which is
