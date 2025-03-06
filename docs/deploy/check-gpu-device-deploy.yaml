@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: check-gpu-device
+  labels:
+    app: check-gpu-device
+  annotations:
+    deployment.kubernetes.io: GPU卡检测服务
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: check-gpu-device
+  template:
+    metadata:
+      name: check-gpu-device
+      labels:
+        app: check-gpu-device
+    spec:
+      containers:
+        - name: check-gpu-device
+          image: hurricane1988/check-gpu-device:v1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+              scheme: HTTP
+            timeoutSeconds: 5
+            periodSeconds: 30
+            successThreshold: 1
+            failureThreshold: 3
+      restartPolicy: Always
+      
