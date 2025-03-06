@@ -8,7 +8,7 @@
 - ✅ CUDA 设备信息 (/device) —— 查询 NVIDIA GPU 设备状态
 - ✅ Gunicorn 生产级 WSGI 服务器 —— 提供高性能 API
 - ✅ 非 root 运行 —— 提高安全性
-- ✅ Docker 部署支持 —— 适用于容器化环境
+- ✅ Docker/Kubernetes部署支持 —— 适用于容器化环境
 
 ---
 
