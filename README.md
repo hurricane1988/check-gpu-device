@@ -55,7 +55,7 @@ make docker-build
 ```
 运行容器
 ```shell
-docker run --gpus all -p 8000:8000 --rm check-gpu-check
+docker run --gpus all -p 8000:8000 --rm check-gpu-device
 ```
 
 ```shell
